@@ -5,9 +5,12 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+//adding mongo URI support for heroku environment variable
+var mongouri = process.env.MONGOLAB_URI || 'localhost:27017/node-rest-tutorial'
+
 var mongo = require('mongodb');
 var monk = require('monk');
-var db = monk('localhost:27017/node-rest-tutorial');
+var db = monk(mongouri);
 
 var routes = require('./routes/index');
 var users = require('./routes/users');

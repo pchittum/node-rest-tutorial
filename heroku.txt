@@ -1,0 +1,17 @@
+heroku deployment steps
+
+1. Add mongolabs free addition
+
+    heroku addons:create mongolab
+
+2. Go to heroku app page
+
+3. Find mongolabs addon and click to see deployment status
+
+4. create new user for mongolabs instance
+
+5. write down your connection uri
+
+mongo ds029793.mongolab.com:29793/heroku_3q90pvdh -u node-rest-tutorial -p <password>
+
+mongodb://node-rest-tutorial:<password>@ds029793.mongolab.com:29793/heroku_3q90pvdh
